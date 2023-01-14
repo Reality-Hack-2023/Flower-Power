@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4503178, g: 0.5003408, b: 0.57531166, a: 1}
+  m_IndirectSpecularColor: {r: 0.18309204, g: 0.22876471, b: 0.30665746, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -268,15 +268,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c703502c1493f5b4eb3e95b2efe0271e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  apiKey: AAPK0f7c83cfbb6d4997bfce86e85d43839fgNm3lIPW9OfZOeqVo-WunAyXzOAiWppyOZrueVxVLaUjw9wT3f6A5W0LQUr9ntYU
+  apiKey: 
   basemap: https://www.arcgis.com/home/item.html?id=c7d2b5c334364e8fb5b73b0f4d6a779b
   basemapType: 0
   basemapAuthentication:
     ConfigurationIndex: -1
   elevation: https://elevation3d.arcgis.com/arcgis/rest/services/WorldElevation3D/Terrain3D/ImageServer
+  enableExtent: 0
   elevationAuthentication:
     ConfigurationIndex: -1
-  enableExtent: 0
   extent:
     GeographicCenter:
       x: 0
@@ -292,13 +292,6 @@ MonoBehaviour:
     Type: 1
     Source: https://tiles.arcgis.com/tiles/z2tnIkrLQ2BRzr6P/arcgis/rest/services/SanFrancisco_Bldgs/SceneServer
     Opacity: 1
-    IsVisible: 1
-    Authentication:
-      ConfigurationIndex: -1
-  - Name: MDF-HDF Total Population
-    Type: 0
-    Source: https://tiles.arcgis.com/tiles/oZfKvdlWHN1MwS48/arcgis/rest/services/TotPopTile2/MapServer
-    Opacity: 0.2
     IsVisible: 1
     Authentication:
       ConfigurationIndex: -1
@@ -520,7 +513,6 @@ MonoBehaviour:
   horizontalFov: 0
   viewportSizeX: 0
   viewportSizeY: 0
-  qualityScalingFactor: 2
 --- !u!20 &1354401680
 Camera:
   m_ObjectHideFlags: 0
