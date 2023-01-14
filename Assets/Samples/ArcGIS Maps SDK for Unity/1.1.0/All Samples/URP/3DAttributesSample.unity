@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18309204, g: 0.22876471, b: 0.30665746, a: 1}
+  m_IndirectSpecularColor: {r: 0.4503178, g: 0.5003408, b: 0.57531166, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -152,10 +152,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 441482e8936e35048a1dffac814e3ef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Profile: {fileID: 0}
-  m_StaticLightingSkyUniqueID: 0
-  m_StaticLightingCloudsUniqueID: 0
-  m_StaticLightingVolumetricClouds: 0
 --- !u!4 &69324442
 Transform:
   m_ObjectHideFlags: 1
@@ -233,8 +229,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec66b314f7e53544190bf28e3ddaf170, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CameraComponent: {fileID: 963194233}
-  arcGISMapComponent: {fileID: 1068604539}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,6 +379,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UpdateClippingPlanes: 1
+  UseCameraViewportProperties: 1
+  verticalFov: 0
+  horizontalFov: 0
+  viewportSizeX: 0
+  viewportSizeY: 0
+  qualityScalingFactor: 2
 --- !u!114 &963194234
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -503,6 +503,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44f3381abd4f52e48928147257044361, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  APIKey: 
 --- !u!1 &1068604537
 GameObject:
   m_ObjectHideFlags: 0
@@ -534,15 +535,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c703502c1493f5b4eb3e95b2efe0271e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  apiKey: 
+  apiKey: AAPK0f7c83cfbb6d4997bfce86e85d43839fgNm3lIPW9OfZOeqVo-WunAyXzOAiWppyOZrueVxVLaUjw9wT3f6A5W0LQUr9ntYU
   basemap: 
   basemapType: 0
   basemapAuthentication:
     ConfigurationIndex: -1
   elevation: 
-  enableExtent: 0
   elevationAuthentication:
     ConfigurationIndex: -1
+  enableExtent: 0
   extent:
     GeographicCenter:
       x: 0

@@ -4,5 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
-  m_configObjects: {}
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Samples/ArcGIS Maps SDK for Unity/1.1.0/All Samples/URP/ComponentGlobalSample.unity
+    guid: e862c3c54d393fb4c8f464784f3271d6
+  m_configObjects:
+    Unity.XR.Oculus.Settings: {fileID: 11400000, guid: f63f5f1a5c95f6b48a98cae15d5a5317, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: f48329fd1a0bfa040a8a1fd88528e026, type: 2}
