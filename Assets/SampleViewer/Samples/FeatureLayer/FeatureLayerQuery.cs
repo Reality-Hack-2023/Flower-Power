@@ -34,9 +34,8 @@ public class Feature
 [System.Serializable]
 public class BaseballProperties
 {
-    public string LEAGUE;
-    public string TEAM;
-    public string NAME;
+    public string Acronym;
+    public string Country;
 }
 
 [System.Serializable]
@@ -51,7 +50,7 @@ public class Geometry
 public class FeatureLayerQuery : MonoBehaviour
 {
     // The feature layer we are going to query
-    public string FeatureLayerURL = "https://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/Major_League_Baseball_Stadiums/FeatureServer/0";
+    public string FeatureLayerURL = "https://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/Major_Acronym_Baseball_Stadiums/FeatureServer/0";
     
     // This prefab will be instatiated for each feature we parse
     public GameObject StadiumPrefab;
@@ -108,14 +107,13 @@ public class FeatureLayerQuery : MonoBehaviour
     // where=1=1 gets every feature. geometry based or more intelligent where clauses should be used
     //     with larger datasets
     // outSR=4326 gets the return geometries in the SR 4326
-    // outFields=LEAGUE,TEAM,NAME specifies the fields we want in the response
+    // outFields=Acronym,Country,NAME specifies the fields we want in the response
     private string MakeRequestHeaders()
     {
         string[] OutFields =
         {
-            "LEAGUE",
-            "TEAM",
-            "NAME"
+            "Acronym",
+            "Country"
         };
 
         string OutFieldHeader = "outFields=";
@@ -167,7 +165,7 @@ public class FeatureLayerQuery : MonoBehaviour
             ArcGISPoint Position = new ArcGISPoint(Longitude, Latitude, StadiumSpawnHeight, new ArcGISSpatialReference(FeatureSRWKID));
 
             var NewStadium = Instantiate(StadiumPrefab, this.transform);
-            NewStadium.name = feature.properties.NAME;
+            NewStadium.name = feature.properties.Acronym;
             Stadiums.Add(NewStadium);
             NewStadium.SetActive(true);
 
@@ -176,10 +174,8 @@ public class FeatureLayerQuery : MonoBehaviour
             LocationComponent.Position = Position;
 
             var StadiumInfo = NewStadium.GetComponent<StadiumInfo>();
-
-            StadiumInfo.SetInfo(feature.properties.NAME);
-            StadiumInfo.SetInfo(feature.properties.TEAM);
-            StadiumInfo.SetInfo(feature.properties.LEAGUE);
+            StadiumInfo.SetInfo(feature.properties.Country);
+            StadiumInfo.SetInfo(feature.properties.Acronym);
 
             StadiumInfo.ArcGISCamera = ArcGISCamera;
             StadiumInfo.SetSpawnHeight(StadiumSpawnHeight);

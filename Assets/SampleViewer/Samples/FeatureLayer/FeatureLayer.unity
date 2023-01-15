@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 261.85736, g: 324.42407, b: 429.44516, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -356,6 +356,7 @@ MonoBehaviour:
   horizontalFov: 88.76051
   viewportSizeX: 878
   viewportSizeY: 518
+  qualityScalingFactor: 2
 --- !u!114 &91838855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,6 +387,7 @@ MonoBehaviour:
   taaMotionVectorRejection: 0
   taaAntiHistoryRinging: 0
   taaBaseBlendFactor: 0.875
+  taaJitterScale: 1
   physicalParameters:
     m_Iso: 200
     m_ShutterSpeed: 0.005
@@ -497,8 +499,8 @@ Camera:
   m_GameObject: {fileID: 91838849}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -545,9 +547,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_IsInitialized: 1
   m_LocalPosition:
-    x: -2371019.7248142264
-    y: 3904527.2583592343
-    z: -4861310.850246893
+    x: -2371019.720687084
+    y: 3904527.251519034
+    z: -4861310.841784997
   m_LocalRotation:
     value:
       x: -0.30086097
@@ -622,6 +624,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f231c4fb786f3946a6b90b886c48677, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
   m_SubmitButton: Submit
@@ -1159,7 +1162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c395c22f6e7a74c4a8ede3782042cc77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FeatureLayerURL: https://services.arcgis.com/P3ePLMYs2RVChkJx/ArcGIS/rest/services/Major_League_Baseball_Stadiums/FeatureServer/0
+  FeatureLayerURL: https://services7.arcgis.com/jsdw5uRDA7vtePGs/arcgis/rest/services/energy_projects/FeatureServer/0
   StadiumPrefab: {fileID: 6815625023641715184, guid: e1518c14a09eb5e4e9287179e0c981a5, type: 3}
   Stadiums: []
   ArcGISCamera: {fileID: 91838854}
@@ -1769,15 +1772,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c703502c1493f5b4eb3e95b2efe0271e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  apiKey: 
+  apiKey: AAPK0f7c83cfbb6d4997bfce86e85d43839fgNm3lIPW9OfZOeqVo-WunAyXzOAiWppyOZrueVxVLaUjw9wT3f6A5W0LQUr9ntYU
   basemap: https://www.arcgis.com/home/item.html?id=ea3befe305494bb5b2acd77e1b3135dc
   basemapType: 0
   basemapAuthentication:
     ConfigurationIndex: -1
   elevation: https://elevation3d.arcgis.com/arcgis/rest/services/WorldElevation3D/Terrain3D/ImageServer
-  enableExtent: 0
   elevationAuthentication:
     ConfigurationIndex: -1
+  enableExtent: 0
   extent:
     GeographicCenter:
       x: 0
